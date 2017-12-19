@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Popular Movies Top 100</string>
+    <string name="highest_rated_top_100">Highest Rated Top 100</string>
+    <string name="movie_poster">movie_poster</string>
+    <string name="order_popular">most popular</string>
+    <string name="order_highest_rated">highest rated</string>
+    <string name="movie_information">Movie Details</string>
+    <string name="poster_thumbnaill">Movie poster thumbnail</string>
+    <string name="in_cinemas">In Cinemas</string>
+    <string name="no_inernet">Error,no internet connection :(\n press restart when connected</string>
+
+    <string name="plot">Plot</string>
+    <string name="restart_image">restart image</string>
+    <string name="trailers">trailers</string>
+    <string name="icon">icon</string>
+    <string name="reviews">reviews</string>
+    <string name="action_share">Share</string>
+    <string name="favorites">Favorites</string>
+    <string name="small_poster">small poster</string>
+    <string name="action_favorite">action_favorite</string>
+    <string name="action_unfavorite">action unfavorite</string>
+    <string name="delete_all_favorites">delete all favorites</string>
+    <string name="app_entry_image">app entry image</string>
+</resources>

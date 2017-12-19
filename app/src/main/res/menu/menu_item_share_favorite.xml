@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".MovieFragmentActivity">
+
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/abc_ic_menu_share_mtrl_alpha"
+        android:title="@string/action_share"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_favorite"
+        android:icon="@drawable/ic_star_black_24dp"
+        android:title="@string/action_favorite"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_unfavorite"
+        android:icon="@drawable/ic_star_border_black_24dp"
+        android:title="@string/action_unfavorite"
+        app:showAsAction="ifRoom"/>
+</menu>
