@@ -57,6 +57,7 @@ public class SplashActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        hideActionBar();
         splashImage = findViewById(R.id.splashImage);
         imageButton = findViewById(R.id.imageButton);
         Picasso.with(this).load(R.drawable.s720_1280).into(splashImage);
@@ -82,7 +83,7 @@ public class SplashActivity extends AppCompatActivity
         }
     }
 
-//    asynctask to fetch all the data to start the MainActivity,no need to worry about a zombie process
+    //    asynctask to fetch all the data to start the MainActivity,no need to worry about a zombie process
 //    possibility since the orientation can not be changed in this Activity.
     @SuppressLint("StaticFieldLeak")
     public class MovieQueryTask extends AsyncTask<String, Void, ArrayList<MovieObject[]>>
@@ -125,7 +126,6 @@ public class SplashActivity extends AppCompatActivity
         }
 
         /**
-         *
          * @param movieObjects the pared result from the TMDB query,will be put into a parcel and sent to MainActivity
          */
         @Override
@@ -255,6 +255,7 @@ public class SplashActivity extends AppCompatActivity
 
     /**
      * will check if there is network to actually start the app
+     *
      * @param view the reset button image
      */
     public void loadData(View view)
@@ -271,6 +272,15 @@ public class SplashActivity extends AppCompatActivity
                 new MovieQueryTask().execute(popularityAndVoteAverage);
             }
         }
+    }
+
+    /**
+     * will hide the ActionBar
+     */
+    private void hideActionBar()
+    {
+        if (getSupportActionBar() != null)
+            getSupportActionBar().hide();
     }
 
 }
