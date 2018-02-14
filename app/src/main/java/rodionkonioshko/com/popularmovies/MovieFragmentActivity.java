@@ -51,6 +51,8 @@ public class MovieFragmentActivity extends AppCompatActivity
     private String trailerQuery;
     //the dest that we will query our reviews from
     private String reviewQuery;
+    //trailer that will be shared via the share intent
+    private String shareTrailer = "";
 
     //loader callbacks for our trailerLoader
     private final LoaderCallbacks<TrailerObject[]> trailerLoader = new LoaderCallbacks<TrailerObject[]>()
@@ -117,6 +119,15 @@ public class MovieFragmentActivity extends AppCompatActivity
         public void onLoadFinished(Loader<TrailerObject[]> loader, TrailerObject[] data)
         {
             initializeScreen();
+
+            for (TrailerObject trailerObject : data)
+            {
+                if (trailerObject.getmKey() != null)
+                {
+                    shareTrailer = "http://www.youtube.com/watch?v=" + trailerObject.getmKey();
+                    break;
+                }
+            }
         }
 
         @Override
@@ -302,7 +313,9 @@ public class MovieFragmentActivity extends AppCompatActivity
                                         "check out this movie" + "\n" +
                                                 MovieFragmentActivity.this.getIntent().getStringExtra("mOriginalTitle") + "\n" +
                                                 MovieFragmentActivity.this.getIntent().getStringExtra("mOverview") + "\n" +
-                                                "shall we watch it?"
+                                                "shall we watch it?" + "\n" +
+                                                shareTrailer
+
                                 ).startChooser();
                 return true;
 
