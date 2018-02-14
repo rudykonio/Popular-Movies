@@ -7,7 +7,9 @@ From the App Bar user will be able to add/remove the clicked movie to/from his f
 **very important**  
 app won't run unless you'll provide your own TMDB Api Key which you can get [here](https://developers.themoviedb.org/3/getting-started/introduction)  
 after getting the key change the API_KEY_VALUE in NetworkUtils class and it should work.
-
+  
+  [App test](https://www.youtube.com/watch?v=q1tbwqvlImA)(mobile version)  
+  
   [App test](https://www.youtube.com/watch?v=T2SoXs0kKSc)(tab version)
 
 ### Images
